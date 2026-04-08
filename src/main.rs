@@ -2,19 +2,19 @@ use eframe::egui;
 
 fn main() -> eframe::Result<()> {
     eframe::run_native(
-        "My App",
+        "ERQLite",
         eframe::NativeOptions::default(),
-        Box::new(|_cc| Ok(Box::new(MyApp::default()))),
+        Box::new(|_cc| Ok(Box::new(ERQLite::default()))),
     )
 }
 
 #[derive(Default)]
-struct MyApp {
+struct ERQLite {
     name: String,
     count: u32,
 }
 
-impl eframe::App for MyApp {
+impl eframe::App for ERQLite {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("Hello, egui!");
